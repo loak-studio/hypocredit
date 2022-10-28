@@ -1,0 +1,39 @@
+---
+const {meta} = Astro.props
+const title = "Hypo-crédit"
+const description = "Nous sommes un bureau d'assurances et de crédits indépendant qui recherche la solution la plus avantageuse pour vos projets. Indépendant signifie que nous sollicitons pour vous notre réseau de partenaires pour que vous ayez la meilleur offre car nous ne sommes lié à aucune compagnie bien déterminée. Notre engagement c'est l'impartialité."
+const image = ""
+---
+<title>{meta && meta.title
+    ? meta.title 
+    : title}</title>
+<meta name="title" content={   meta && meta.title
+    ? meta.title 
+    : title} />
+<meta name="description" content={meta && meta.description ? meta.description : description} />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url.href} />
+<meta property="og:title" content={meta && meta.title
+    ? meta.title 
+    : title} />
+<meta property="og:description" content={meta && meta.description ? meta.description : description} />
+<meta
+    property="og:image"
+    content={meta && meta.image ? meta.image : image}
+/>
+<link
+    href="/favicon.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+/>
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url.href} />
+<meta property="twitter:title" content={meta && meta.title
+    ? meta.title 
+    : title} />
+<meta property="twitter:description" content={meta && meta.description ? meta.description : description} />
+<meta
+    property="twitter:image"
+    content={meta && meta.image ? meta.image : image}
+/>
