@@ -1,0 +1,39 @@
+---
+const {href, target, light = false} = Astro.props
+const Element = href ? 'a':'button'
+---
+<Element type={href?'submit':null} class={"button" + " " + (light ? 'button__light':'')} href={href} target={target}>
+    <slot/>
+</Element>
+
+<style scoped>
+    .button{
+        background: var(--main);
+        color:white;
+        border:none;
+        padding: 10px 20px;
+        transition: all 300ms ease-out;
+        cursor: pointer;
+        font-family: Ubuntu;
+        font-size: 1rem;
+        border: 1px solid var(--main);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap:0.625rem;
+        line-height: 1.125rem;
+    }
+    .button:hover{
+        background: var(--main-light);
+        border-color: var(--main-light);
+    }
+    .button__light{
+        background: none;
+        color: var(--main-font);
+        border-color: var(--light);
+    }
+    .button__light:hover{
+        background:var(--light);
+        border-color: var(--light);
+    }
+</style>
