@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Ubuntu";
     src: url('/fonts/Ubuntu-Medium.ttf');
-    font-weight: 400;
+    font-weight: 500;
 }
 @font-face {
     font-family: "Ubuntu";
     src: url('/fonts/Ubuntu-Regular.ttf');
-    font-weight: 500;
+    font-weight: 400;
 }

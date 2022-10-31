@@ -1,3 +1,27 @@
 .h1{
     font-family: Ubuntu;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 125%;
+}
+.h2{
+    font-family: Ubuntu;
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+.h3{
+    font-family: Ubuntu;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.h4{
+    font-family: Ubuntu;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.text{
+    font-family: Ubuntu;
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 400;
 }
