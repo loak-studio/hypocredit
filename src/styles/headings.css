@@ -11,11 +11,7 @@
   font-weight: 500;
   color: var(--stone-dark);
 }
-@media (max-width:809px){
-  .h2{
-    font-size: 1.75rem;
-  }
-}
+
 .h3 {
   font-family: Ubuntu;
   font-size: 1.5rem;
@@ -41,4 +37,9 @@
   line-height: 150%;
   font-weight: 400;
   color: var(--stone);
+}
+@media (max-width:809px){
+  .h2{
+    font-size: 1.75rem;
+  }
 }
