@@ -8,11 +8,16 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prettier":"prettier --write ."
   },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
     "astro": "^1.6.0",
     "astro-compress": "^1.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.7.0"
   }
 }
