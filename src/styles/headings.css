@@ -38,8 +38,8 @@
   font-weight: 400;
   color: var(--stone);
 }
-@media (max-width:809px){
-  .h2{
+@media (max-width: 809px) {
+  .h2 {
     font-size: 1.75rem;
   }
 }

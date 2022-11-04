@@ -1,87 +1,96 @@
 ---
-import Office from "../../assets/office.png"
+import Office from "../../assets/office.png";
 import Button from "../atoms/Button.astro";
 import Ring from "../atoms/Ring.astro";
 ---
+
 <section class="office">
-    <div class="office__ring">
-        <Ring/>
-    </div>
-    <figure class="office__image">
-        <img src={Office} alt="">
-    </figure>
-    <div class="office__text">
-        <h2 class="h2">Depuis plus de <span class="highlighted--loan">20 ans</span>, nous trouvons ce qu’il y a de mieux pour nos clients. </h2>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pellentesque turpis vitae mattis. Cras rutrum turpis non urna mattis maximus. Quisque condimentum sit amet purus vitae vehicula. Mauris pretium, nisl ac consequat ultrices, dui est scelerisque libero, at congue elit neque eget diam. </p>
-        <Button light={true}>En savoir plus à notre sujet</Button>
-    </div>
+  <div class="office__ring">
+    <Ring />
+  </div>
+  <figure class="office__image">
+    <img src={Office} alt="" />
+  </figure>
+  <div class="office__text">
+    <h2 class="h2">
+      Depuis plus de <span class="highlighted--loan">20 ans</span>, nous
+      trouvons ce qu’il y a de mieux pour nos clients.
+    </h2>
+    <p class="text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
+      pellentesque turpis vitae mattis. Cras rutrum turpis non urna mattis
+      maximus. Quisque condimentum sit amet purus vitae vehicula. Mauris
+      pretium, nisl ac consequat ultrices, dui est scelerisque libero, at congue
+      elit neque eget diam.
+    </p>
+    <Button light={true}>En savoir plus à notre sujet</Button>
+  </div>
 </section>
 
 <style scoped>
-    .office{
-        max-width: 1230px;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        position: relative;
+  .office {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+  }
+  .office__ring {
+    position: absolute;
+    left: -11.6875rem;
+    bottom: 0;
+    z-index: 2;
+  }
+  .office__image {
+    position: absolute;
+    left: 0;
+    z-index: 4;
+  }
+  .office__image img {
+    width: 100%;
+    height: 100%;
+  }
+  .office__text {
+    max-width: 758px;
+    padding: 85px 140px;
+    background: var(--background);
+    z-index: 3;
+  }
+  .office__text .text {
+    margin: 38px 0;
+  }
+  @media only screen and (max-width: 1230px) {
+    .office__image {
+      position: static;
+      max-width: 500px;
+      flex-shrink: 0;
+      transform: translateX(2rem);
     }
-    .office__ring{
-        position: absolute;
-        left: -11.6875rem;
-        bottom: 0;
-        z-index: 2;
+    .office__text {
+      padding: 3rem;
     }
-    .office__image{
-        position: absolute;
-        left:0;
-        z-index: 4;
+  }
+  @media only screen and (max-width: 1000px) {
+    .office {
+      flex-direction: column;
     }
-    .office__image img{
-        width:100%;
-        height: 100%;
+    .office__text {
+      padding: 5rem 2rem 2rem 2rem;
+      transform: translateY(-4rem);
     }
-    .office__text{
-        max-width: 758px;
-        padding: 85px 140px;
-        background:var(--background);
-        z-index: 3;
+  }
+  @media only screen and (max-width: 809px) {
+    .office__image {
+      max-width: 100%;
+      width: 100%;
+      transform: translateX(0);
     }
-    .office__text .text{
-        margin:38px 0;
+    .office__text {
+      padding: 1rem;
+      transform: translateY(0);
+      max-width: 100%;
     }
-    @media (max-width:1230px){
-        .office__image{
-            position: static;
-            max-width: 500px;
-            flex-shrink: 0;
-            transform: translateX(2rem);
-        }
-        .office__text{
-            padding:3rem;
-        }
-    }
-    @media(max-width:1000px){
-        .office{
-            flex-direction: column;
-        }
-        .office__text{
-            padding:5rem 2rem 2rem 2rem;
-            transform: translateY(-4rem);
-        }
-    }
-    @media(max-width:809px){
-        .office__image{
-            max-width: 100%;
-            width:100%;
-
-            transform: translateX(0);
-        }
-        .office__text{
-            padding:1rem;
-            transform: translateY(0);
-            max-width: 100%;
-        }
-    }
+  }
 </style>
