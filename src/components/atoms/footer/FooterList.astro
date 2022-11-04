@@ -1,40 +1,51 @@
 ---
-const {title="title", items=[]} = Astro.props
+const { title = "title", items = [] } = Astro.props;
 ---
+
 <div>
-    <h4 set:text={title} class="h4"/>
-    <ul>
-       {items.map(item=> {
-            if(item.disabled){
-                return <li><span class="text">{item.label}</span></li>
-            }else{
-                return <li>
-        <a class="underline underline__white" href={item.href}>{item.label}</a>
-    </li>
-            }
-       })}
-    </ul>
+  <h4 set:text={title} class="h4" />
+  <ul>
+    {
+      items.map((item) => {
+        if (item.disabled) {
+          return (
+            <li>
+              <span class="text">{item.label}</span>
+            </li>
+          );
+        } else {
+          return (
+            <li>
+              <a class="underline underline__white" href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          );
+        }
+      })
+    }
+  </ul>
 </div>
 
 <style scoped>
-    h4{
-        margin-bottom: 15px;
-    }
-    ul > * + *{
-        margin-top:15px;
-    }
-    ul li {
-        font-weight: 400;
-    }
-    ul li a{
-        color:currentColor;
-        text-decoration: none;
-        line-height: 150%;
-        padding-left: 5px;
-    }
-    ul li span{
-        padding-left:5px;
-        display: inline-block;
-        line-height: 150%;
-    }
+  h4 {
+    margin-bottom: 15px;
+  }
+  ul > * + * {
+    margin-top: 15px;
+  }
+  ul li {
+    font-weight: 400;
+  }
+  ul li a {
+    color: currentColor;
+    text-decoration: none;
+    line-height: 150%;
+    padding-left: 5px;
+  }
+  ul li span {
+    padding-left: 5px;
+    display: inline-block;
+    line-height: 150%;
+  }
 </style>

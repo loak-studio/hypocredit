@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prettier":"prettier --write ."
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
