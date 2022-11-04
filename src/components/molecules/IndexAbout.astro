@@ -1,12 +1,16 @@
 ---
 import Office from "../../assets/office.png";
 import Button from "../atoms/Button.astro";
+import Dots from "../atoms/Dots.astro";
 import Ring from "../atoms/Ring.astro";
 ---
 
 <section class="office">
   <div class="office__ring">
     <Ring />
+  </div>
+  <div class="office__dots">
+    <Dots />
   </div>
   <figure class="office__image">
     <img src={Office} alt="" />
@@ -42,6 +46,12 @@ import Ring from "../atoms/Ring.astro";
     left: -11.6875rem;
     bottom: 0;
     z-index: 2;
+  }
+  .office__dots {
+    position: absolute;
+    right: -61px;
+    bottom: -192px;
+    z-index: 5;
   }
   .office__image {
     position: absolute;
