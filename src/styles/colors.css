@@ -1,12 +1,14 @@
 :root{
-    --main-font: #111827;
     --main: #0A4370;
-    --main-light:#1E40AF;
+    --main-light:#09538D;
+    --background: #F3F4F6;
+    --background-light: #FFFFFF;
+    --background-dark:#FFFFFF;
+    --loan: #D14905;
+    --loan-light: #FFEDD5;
     --insurance: #767C17;
-    --insurance-light: #C0D04F;
-    --loan:#D14905;
-    --loan-light:#EF7E43;
-    --dark: #1F2937;
-    --light: #E5E7EB;
+    --stone:#4B5563;
+    --stone-light:#111827;
+    --stone-dark:#9CA3AF;
     --loak: #58BBB4;
 }

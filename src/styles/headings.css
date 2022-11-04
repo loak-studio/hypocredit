@@ -3,25 +3,37 @@
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 125%;
+    color: var(--stone-dark);
 }
 .h2{
     font-family: Ubuntu;
     font-size: 2.25rem;
     font-weight: 500;
+    color: var(--stone-dark);
 }
 .h3{
     font-family: Ubuntu;
     font-size: 1.5rem;
     font-weight: 500;
+    color: var(--stone-dark);
 }
 .h4{
     font-family: Ubuntu;
     font-size: 1.25rem;
     font-weight: 500;
+    color: var(--stone-dark);
 }
 .text{
     font-family: Ubuntu;
     font-size: 1rem;
     line-height: 150%;
     font-weight: 400;
+    color: var(--stone);
+}
+.description{
+    font-family: Ubuntu;
+    font-size: 0.875rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--stone);
 }
