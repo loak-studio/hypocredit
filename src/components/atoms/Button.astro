@@ -29,18 +29,27 @@ const Element = href ? "a" : "button";
     gap: 0.625rem;
     line-height: 1.125rem;
   }
+  @media (max-width:809px){
+    .button{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+    padding: 1rem 2rem;
+    }
+  }
   .button:hover {
     background: var(--main-light);
     border-color: var(--main-light);
   }
   .button__light {
     background: none;
-    color: var(--main-font);
-    border-color: var(--light);
+    color: var(--stone-dark);
+    border-color: var(--background-dark);
   }
   .button__light:hover {
-    background: var(--light);
-    border-color: var(--light);
+    background: var(--background-dark);
+    border-color: var(--background-dark);
     border-bottom-color: var(--main);
   }
 </style>

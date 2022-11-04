@@ -16,7 +16,7 @@ const { title = "title", items = [] } = Astro.props;
         } else {
           return (
             <li>
-              <a class="underline underline__white" href={item.href}>
+              <a class="underline underline--white" href={item.href}>
                 {item.label}
               </a>
             </li>
@@ -30,6 +30,7 @@ const { title = "title", items = [] } = Astro.props;
 <style scoped>
   h4 {
     margin-bottom: 15px;
+    color: var(--stone-dark);
   }
   ul > * + * {
     margin-top: 15px;
@@ -42,6 +43,7 @@ const { title = "title", items = [] } = Astro.props;
     text-decoration: none;
     line-height: 150%;
     padding-left: 5px;
+    color: var(--stone)
   }
   ul li span {
     padding-left: 5px;

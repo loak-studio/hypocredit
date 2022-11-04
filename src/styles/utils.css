@@ -16,9 +16,13 @@
   height: 2px;
 }
 
-.underline__white::after {
+.underline--white::after {
   background: currentColor;
 }
-.underline__main::after {
+.underline--main::after {
   background: var(--main);
+}
+
+.highlighted--loan{
+  color:var(--insurance);
 }
