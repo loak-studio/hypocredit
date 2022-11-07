@@ -71,7 +71,7 @@ import Ring from "../atoms/Ring.astro";
   .office__text .text {
     margin: 38px 0;
   }
-  @media only screen and (max-width: 1230px) {
+  @media only screen and (min-width:1001px) and (max-width: 1230px) {
     .office__image {
       position: static;
       max-width: 500px;
@@ -82,14 +82,21 @@ import Ring from "../atoms/Ring.astro";
       padding: 3rem;
     }
   }
-  @media only screen and (min-width:810px) (max-width: 1000px) {
+  @media only screen and (max-width: 1000px) {
+    .office {
+      flex-direction: column;
+    }
+    .office__image{
+      position: static;
+      transform: translateX(0rem);
+    }
     .office__text {
       padding: 5rem 2rem 2rem 2rem;
       transform: translateY(-4rem);
     }
   }
   @media only screen and (max-width: 809px) {
-    .office {
+        .office {
       flex-direction: column;
     }
     .office__image {
