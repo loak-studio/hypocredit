@@ -14,7 +14,8 @@
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
     "astro": "^1.6.0",
-    "astro-compress": "^1.1.1"
+    "astro-compress": "^1.1.1",
+    "marked": "^4.2.2"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
