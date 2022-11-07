@@ -1,4 +1,6 @@
 ---
+import External from "./External.astro";
+
 const { href, target, light = false } = Astro.props;
 const Element = href ? "a" : "button";
 ---
@@ -9,7 +11,7 @@ const Element = href ? "a" : "button";
   href={href}
   target={target}
 >
-  <slot />
+  <slot /> {target == "_blank" && <External/>}
 </Element>
 
 <style scoped>

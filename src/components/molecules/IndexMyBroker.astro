@@ -7,7 +7,7 @@ import Broker from "../../assets/broker.png"
     <h2 class="h2">Qu'est-ce que MyBroker?</h2>
     <h3 class="h3">MyBroker, Votre courtier toujours à portée de main!</h3>
     <p class="text">Vous pouvez accéder en toute sécurité à un résumé de toutes vos données d'assurance dans une seule application. Vos contrats et déclarations de sinistres sont centralisés et accessibles de partout.</p>
-    <Button light={true}>Se connecter</Button>
+    <Button light={true} target="_blank" href="#">Se connecter</Button>
     <figure class="broker__app">
         <img src={Broker} alt="">
     </figure>
@@ -17,7 +17,7 @@ import Broker from "../../assets/broker.png"
     .broker{
         max-width: 887px;
         width: 100%;
-        margin: 10rem auto 0 auto;
+        margin: 10rem auto 10rem auto;
         position: relative;
     }
     .broker > *{
@@ -32,7 +32,7 @@ import Broker from "../../assets/broker.png"
     @media only screen and (max-width:916px){
         .broker{
             padding:1rem;
-            margin: 5rem auto 0 auto;
+            margin: 5rem auto 5rem auto;
         }
         .broker__app{
             width:300px;
