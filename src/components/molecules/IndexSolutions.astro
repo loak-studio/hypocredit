@@ -1,5 +1,6 @@
 ---
 import Button from "../atoms/Button.astro";
+import Dots from "../atoms/Dots.astro";
 import Logo from "../atoms/Logo.astro";
 import SolutionItem from "../atoms/SolutionItem.astro";
 
@@ -23,6 +24,9 @@ const solutions = [
                 <SolutionItem solution={solution}/>
             )}
     </ul>
+    <div class="solutions__dots">
+        <Dots/>
+    </div>
 </section>
 
 <style>
@@ -30,11 +34,17 @@ const solutions = [
         max-width: 1094px;
         width: 100%;
         margin:10rem auto 0 auto;
+        position: relative;
     }
     .solutions__description{
         max-width: 622px;
         margin: 2rem 0;
         width: 100%;
+    }
+    .solutions__dots{
+        position: absolute;
+        left: -270px;
+        bottom:-150px;
     }
     @media only screen and (max-width:1127px){
         .solutions{
