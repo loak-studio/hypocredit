@@ -26,3 +26,8 @@
 .highlighted--loan {
   color: var(--insurance);
 }
+@media only screen and (max-width:809px){
+  .no-scroll{
+    overflow: hidden;
+  }
+}

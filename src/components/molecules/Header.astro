@@ -1,0 +1,141 @@
+---
+import Button from "../atoms/Button.astro";
+import HeaderItem from "../atoms/HeaderItem.astro";
+import Logo from "../atoms/Logo.astro";
+---
+
+<script>
+    const menuButton = document.querySelector('.menu')
+    const header = document.querySelector('header')
+    const body = document.querySelector('html')
+    menuButton.addEventListener('click',()=>{
+        header.classList.toggle('active')
+        body.classList.toggle('no-scroll')
+        window.scrollTo(0,0)
+    })
+</script>
+
+<header class="header">
+    <a href="/">
+        <Logo />
+    </a>
+    <nav class="header__navigation">
+        <ul>
+            <HeaderItem href="/">Accueil</HeaderItem>
+            <li class="dropdown">
+                <a
+                    class="underline underline--main"
+                    href="/produits-et-services/">Produits et services</a
+                >
+            </li>
+            <HeaderItem href="/infos-et-documents/"
+                >Infos et documents</HeaderItem
+            >
+            <HeaderItem href="/a-propos/">A propos</HeaderItem>
+            <HeaderItem href="/contact/">Contact</HeaderItem>
+        </ul>
+    </nav>
+    <div class="header__broker">
+        <Button href="#" target="_blank">Accéder à mes infos</Button>
+    </div>
+    <button class="menu">
+        Menu
+    </button>
+</header>
+
+<style scoped>
+    .header {
+        flex-wrap: wrap;
+        max-width: 1280px;
+        width: 100%;
+        margin: 3rem auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__navigation ul {
+        display: flex;
+        gap: 28px;
+    }
+    .dropdown a {
+        text-decoration: none;
+        color: var(--stone-dark);
+    }
+    .dropdown::after {
+        content: "V";
+        margin-left: 10px;
+        display: inline-block;
+        transition: transform 300ms ease-in-out;
+    }
+    .dropdown:hover::after {
+        transform: rotate(180deg);
+    }
+    .menu{
+        display: none;
+    }
+    @media only screen and (max-width:1280px){
+        .header{
+            padding:1rem;
+        }
+    }
+    @media only screen and (max-width:1100px){
+        .header__navigation {
+            order: 3;
+            margin-top:1rem;
+            width: 100%;
+        }
+        .header{
+            flex-wrap: wrap;
+        }
+    }
+    @media only screen and (max-width:809px){
+        .header__navigation{
+            margin:0rem;
+        }
+        .menu{
+            display: block;
+            z-index: 21;
+        }
+        .header{
+
+        margin: 1rem auto;
+        }
+        .header__navigation{
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            left:0;
+            top:0;
+            transform: translateX(-300vw);
+            transition: transform 300ms ease-in-out;
+            background: white;
+            z-index: 20;
+        }
+        .header__navigation ul{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .header__broker{
+            position: fixed;
+            transform: translateX(-300vw);
+            transition: transform 300ms ease-in-out;
+            bottom: 1rem;
+            left:0;
+            z-index: 22;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 0 1rem;
+        }
+        .active > .header__navigation{
+            transform: translateX(0);
+        }
+        .active > .header__broker{
+            transform: translateX(0vw);
+        }
+    }
+</style>
+

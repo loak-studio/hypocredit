@@ -25,12 +25,30 @@ const md = `
 </Main>
 
 <style scoped>
+    
     h1{
         text-align: center;
-        margin: 10rem 0;
+        margin: 5rem 0;
     }
     div{
         max-width: 622px;
         margin: 0 auto;
+    }
+    .markdown{
+        padding: 0 1rem;
+    }
+        article{
+            margin: 5rem 0;
+        }
+    @media only screen and (min-width:809px){
+        h1{
+            margin: 0rem 0 10rem 0;
+        }
+        article{
+            margin: 10rem 0;
+        }
+        .markdown{
+            padding: 0;
+        }
     }
 </style>
