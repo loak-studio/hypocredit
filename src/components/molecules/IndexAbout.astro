@@ -82,16 +82,16 @@ import Ring from "../atoms/Ring.astro";
       padding: 3rem;
     }
   }
-  @media only screen and (min-width:810px) and (max-width: 1000px) {
-    .office {
-      flex-direction: column;
-    }
+  @media only screen and (min-width:810px) (max-width: 1000px) {
     .office__text {
       padding: 5rem 2rem 2rem 2rem;
       transform: translateY(-4rem);
     }
   }
   @media only screen and (max-width: 809px) {
+    .office {
+      flex-direction: column;
+    }
     .office__image {
       max-width: 100%;
       width: 100%;
