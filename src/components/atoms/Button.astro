@@ -11,7 +11,8 @@ const Element = href ? "a" : "button";
   href={href}
   target={target}
 >
-  <slot /> {target == "_blank" && <External/>}
+  <slot />
+  {target == "_blank" && <External />}
 </Element>
 
 <style scoped>

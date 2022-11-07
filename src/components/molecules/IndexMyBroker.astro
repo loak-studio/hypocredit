@@ -1,48 +1,48 @@
 ---
 import Button from "../atoms/Button.astro";
-import Broker from "../../assets/broker.png"
+import Broker from "../../assets/broker.png";
 ---
 
 <section class="broker">
-    <h2 class="h2">Qu'est-ce que MyBroker?</h2>
-    <h3 class="h3">MyBroker, Votre courtier toujours à portée de main!</h3>
-    <p class="text">Vous pouvez accéder en toute sécurité à un résumé de toutes vos données d'assurance dans une seule application. Vos contrats et déclarations de sinistres sont centralisés et accessibles de partout.</p>
-    <Button light={true} target="_blank" href="#">Se connecter</Button>
-    <figure class="broker__app">
-        <img src={Broker} alt="">
-    </figure>
+  <h2 class="h2">Qu'est-ce que MyBroker?</h2>
+  <h3 class="h3">MyBroker, Votre courtier toujours à portée de main!</h3>
+  <p class="text">
+    Vous pouvez accéder en toute sécurité à un résumé de toutes vos données
+    d'assurance dans une seule application. Vos contrats et déclarations de
+    sinistres sont centralisés et accessibles de partout.
+  </p>
+  <Button light={true} target="_blank" href="#">Se connecter</Button>
+  <figure class="broker__app">
+    <img src={Broker} alt="" />
+  </figure>
 </section>
 
 <style scoped>
-    .broker{
-        max-width: 887px;
-        width: 100%;
-        margin: 10rem auto 10rem auto;
-        position: relative;
+  .broker {
+    max-width: 887px;
+    width: 100%;
+    margin: 10rem auto 10rem auto;
+    position: relative;
+  }
+  .broker > * {
+    margin-bottom: 2rem;
+    max-width: 459px;
+  }
+  .broker__app {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  @media only screen and (max-width: 916px) {
+    .broker {
+      padding: 1rem;
+      margin: 5rem auto 5rem auto;
     }
-    .broker > *{
-        margin-bottom: 2rem;
-        max-width: 459px;
+  }
+  @media only screen and (max-width: 809px) {
+    .broker__app {
+      position: static;
+      margin-top: 2rem;
     }
-    .broker__app{
-        position: absolute;
-        right: 0;
-        top:0;
-    }
-    @media only screen and (max-width:916px){
-        .broker{
-            padding:1rem;
-            margin: 5rem auto 5rem auto;
-        }
-        .broker__app{
-            width:300px;
-        }
-    }
-    @media only screen and (max-width:809px){
-        .broker__app{
-            width: 100%;
-            position: static;
-            margin-top:2rem;
-        }
-    }
+  }
 </style>
