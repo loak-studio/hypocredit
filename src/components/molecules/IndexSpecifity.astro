@@ -72,11 +72,13 @@ import Ring from "../atoms/Ring.astro";
     position: absolute;
     right: 0;
   }
-  @media only screen and (min-width:1000px) (max-width: 1200px) {
+  @media only screen and (min-width:1001px) and (max-width: 1200px) {
     .specificity {
+      margin: 5rem 0 0 0;
       padding: 0 0 0 1rem;
     }
     .specificity__image {
+      position: static;
       transform: translateX(-1rem);
     }
     .specificity__text {
