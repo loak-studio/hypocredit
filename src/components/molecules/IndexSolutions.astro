@@ -1,0 +1,57 @@
+---
+import Button from "../atoms/Button.astro";
+import Logo from "../atoms/Logo.astro";
+import SolutionItem from "../atoms/SolutionItem.astro";
+
+const solutions = [
+    {
+        title:'crédits',
+        description:'Le prêt à tempérament est un crédit octroyé par les banques ou les organismes de crédit. Une somme d\'argent est mise à la disposition du client.',
+    },
+    {
+        title:'assurances',
+        description:'C’est un régime ouvrant droit aux prestations en nature de l\'assurance maladie et maternité que peuvent adopter certaines personnes qui sont sans protection sociale et qui résident en France.',
+    }
+]
+---
+<section class="solutions">
+    <h2 class="h2">Nos solutions</h2>
+    <p class="text solutions__description">Aujourd'hui une multitude d'offres de crédits existent sur le marché. Pas si simple de faire le tri soi - même.
+        Notre expérience de courtier en crédits vous permet de trouver la solution la plus appropriée à vos besoins.</p>
+    <ul class="solutions__list">
+        {solutions.map(solution=>
+                <SolutionItem solution={solution}/>
+            )}
+    </ul>
+</section>
+
+<style>
+    .solutions{
+        max-width: 1094px;
+        width: 100%;
+        margin:10rem auto 0 auto;
+    }
+    .solutions__description{
+        max-width: 622px;
+        margin: 2rem 0;
+        width: 100%;
+    }
+    @media only screen and (max-width:1127px){
+        .solutions{
+            padding:0 1rem;
+            margin:5rem auto 0 auto;
+        }
+      
+    }
+    @media only screen and (max-width: 1000px) {
+        .solutions__list{
+            display: flex;
+            gap:2rem;
+        }
+    }
+    @media only screen and (max-width:809px){
+        .solutions__list{
+            flex-wrap: wrap;
+        }
+    }
+</style>

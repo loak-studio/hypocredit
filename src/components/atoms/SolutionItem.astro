@@ -1,0 +1,66 @@
+---
+import Button from "./Button.astro";
+import LogoVertical from "./LogoVertical.astro";
+
+const { solution } = Astro.props;
+---
+
+<li class="solution">
+    <div class="solution__logo">
+        <LogoVertical />
+    </div>
+    <div class="solution__name">
+        <h3 class="h3">{solution.title}</h3>
+        <p class="text">{solution.description}</p>
+    </div>
+    <Button href="#">Voir tous les {solution.title}</Button>
+</li>
+
+<style scoped>
+    .solution {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        position: relative;
+        padding: 41px 23px;
+    }
+    .solution::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background: var(--background-dark);
+        width: calc(100% - 94px);
+    }
+    .solution__logo {
+        border-right: 2px solid var(--background-dark);
+        padding-right: 48px;
+        height: 100px;
+    }
+    .solution__name {
+        max-width: 500px;
+        width: 100%;
+    }
+    .solution__name h3 {
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 1000px) {
+        .solution {
+            flex-direction: column;
+            align-items: flex-start;
+            padding:0;
+            gap:2rem;
+        }
+        .solution__logo {
+            border:none;
+            height: 70px;
+            display: flex;
+            align-items: flex-start;
+            padding-right: 0px;
+        }
+        .solution::after{
+            content: none;
+        }
+    }
+</style>
