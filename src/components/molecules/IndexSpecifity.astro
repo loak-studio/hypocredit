@@ -1,0 +1,89 @@
+---
+import Specificity from "../../assets/specificity.png"
+import Button from "../atoms/Button.astro";
+import Ring from "../atoms/Ring.astro";
+---
+<section class="specificity">
+    <div class="specificity__ring">
+        <Ring/>
+    </div>
+    <div class="specificity__text">
+        <h2 class="h2">Notre specificité</h2>
+        <p class="text">Bureau indépendant en courtage depuis plus de 10 ans, nous sélectionnons nos partenaires professionnels pour vous faire profiter des meilleures conditions et vous proposer différentes solutions d'assurances et de crédits.</p>
+        <p class="text">Nous travaillons, vous en profitez!
+        </p>
+        <p class="text">Car oui, l'assurance est un sujet complexe et nous sommes là pour vous guider et vous aider à effectuer le bon choix parmi les différents types d'assurances et de crédits proposés sur le marché.</p>
+        <p class="text">Intéressé, mais vous n'avez pas le temps de venir dans nos bureaux ?</p>
+        <p class="text">Nous vous proposons de se rencontrer chez vous.</p>
+        <div class="specificity__text__button">
+            <Button href="#">Nous contacter</Button>
+        </div>
+    </div>
+    <figure class="specificity__image">
+        <img src={Specificity} alt="">
+    </figure>
+</section>
+
+<style scoped>
+    .specificity{
+        max-width: 1230px;
+        width: 100%;
+        margin:10rem auto 0 auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .specificity__ring{
+        position: absolute;
+        right: -234px;
+        top:-100px;
+        z-index: 5;
+    }
+    .specificity__text .h2{
+        margin-bottom: 38px;
+    }
+
+    .specificity__text .text{
+        margin-bottom: 15px;
+    }
+    .specificity__text__button{
+        margin-top: 38px;
+    }
+    .specificity__text{
+        background: var(--background);
+        padding:76px 164px 76px 110px;
+    }
+    .specificity__text > *{
+        max-width: 484px;
+        width: 100%;
+    }
+    .specificity__image{
+        position: absolute;
+        right:0;
+    }
+    @media only screen and (max-width:1200px){
+        .specificity{
+            margin: 5rem 0 0 0;
+            padding: 0 0 0 1rem;
+        }
+        .specificity__image{
+            position: static;
+            transform: translateX(-1rem);
+        }
+        .specificity__text{
+            padding:36px;
+        }
+    }
+    @media only screen and (max-width:1000px){
+        .specificity{
+            flex-direction: column;
+            padding:0rem;
+        }
+        .specificity__image{
+            transform: translateX(0rem);
+        }
+        .specificity__text{
+            padding:1rem;
+        }
+    }
+</style>
