@@ -1,16 +1,11 @@
 ---
-import TitleLine from "../components/atoms/TitleLine.astro";
 import PageTitle from "../components/molecules/PageTitle.astro";
 import Main from "../layouts/Main.astro";
 ---
 
-<Main>
+<Main meta={{title:'Infos et documents'}}>
   <PageTitle
     items={[{ href: "/infos-et-documents/", label: "Infos et documents" }]}
-  >
-    <TitleLine
-      >Tous les <span class="highlighted--loan">documents</span> dont vous</TitleLine
-    >
-    <TitleLine>avez besoin</TitleLine>
+  >Tous les <span class="highlighted--loan">documents</span> dont vous avez besoin
   </PageTitle>
 </Main>

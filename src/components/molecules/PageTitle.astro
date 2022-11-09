@@ -35,25 +35,32 @@ import Breadcrumb from "./Breadcrumb.astro";
   .page-title {
     overflow: hidden;
     max-width: 1152px;
-    margin: 50px auto 100px auto;
+    margin: 0px auto 50px auto;
     width: 100%;
-    min-height: 458px;
     position: relative;
-    padding: 147px 103px;
+    padding: 100px 0;
   }
   .page-title__title {
-    position: absolute;
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
   }
   .page-title__title .h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    background: white;
+    padding:5px;
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
   }
   .breadcrumb {
     position: absolute;
     bottom: 5px;
     left: 5px;
+  }
+  @media screen and (min-width:809px){
+  .page-title{
+    padding: 147px 103px;
+    margin: 50px auto 100px auto;
+  }
   }
 </style>

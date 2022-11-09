@@ -6,8 +6,8 @@ const description =
 const image = Astro.url.origin + "/share.png";
 ---
 
-<title>{meta && meta.title ? meta.title : title}</title>
-<meta name="title" content={meta && meta.title ? meta.title : title} />
+<title>{meta && meta.title ? meta.title+ " - Hypo-crédit" : title}</title>
+<meta name="title" content={meta && meta.title ? meta.title+ " - Hypo-crédit" : title} />
 <meta
   name="description"
   content={meta && meta.description ? meta.description : description}
@@ -15,12 +15,12 @@ const image = Astro.url.origin + "/share.png";
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url.href} />
-<meta property="og:title" content={meta && meta.title ? meta.title : title} />
+<meta property="og:title" content={meta && meta.title ? meta.title+ " - Hypo-crédit" : title} />
 <meta
   property="og:description"
   content={meta && meta.description ? meta.description : description}
 />
-<meta property="og:image" content={meta && meta.image ? meta.image : image} />
+<meta property="og:image" content={meta && meta.image ? meta.image+ " - Hypo-crédit" : image} />
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url.href} />
