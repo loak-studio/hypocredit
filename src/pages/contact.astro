@@ -1,0 +1,16 @@
+---
+import TitleLine from "../components/atoms/TitleLine.astro";
+import PageTitle from "../components/molecules/PageTitle.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<Main>
+  <PageTitle items={[{ href: "/contact/", label: "Contact" }]}>
+    <TitleLine
+      >Vous avez une <span class="highlighted--loan">question</span> ou</TitleLine
+    >
+    <TitleLine
+      >besoin de <span class="highlighted--loan">plus d'informations</span>?
+    </TitleLine>
+  </PageTitle>
+</Main>

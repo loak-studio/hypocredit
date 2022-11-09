@@ -1,0 +1,59 @@
+---
+const { items } = Astro.props;
+import Breadcrumb from "./Breadcrumb.astro";
+---
+
+<section class="page-title">
+  <div class="page-title__title">
+    <h1 class="h1"><slot /></h1>
+  </div>
+  <div class="breadcrumb">
+    <Breadcrumb items={items} />
+  </div>
+  <figure class="page-title__background">
+    <img
+      src="https://cdn.britannica.com/38/137338-050-CFD40563/First-Bank-of-the-United-States-part.jpg"
+      alt=""
+    />
+  </figure>
+</section>
+
+<style>
+  .page-title__background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  .page-title__background img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .page-title {
+    overflow: hidden;
+    max-width: 1152px;
+    margin: 50px auto 100px auto;
+    width: 100%;
+    min-height: 458px;
+    position: relative;
+    padding: 147px 103px;
+  }
+  .page-title__title {
+    position: absolute;
+    max-width: 800px;
+    width: 100%;
+  }
+  .page-title__title .h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .breadcrumb {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+  }
+</style>
