@@ -1,54 +1,53 @@
-
 .markdown h1 {
-    font-family: Ubuntu;
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 125%;
-    color: var(--stone-dark);
+  font-family: Ubuntu;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 125%;
+  color: var(--stone-dark);
 }
 
 .markdown h2 {
-    font-family: Ubuntu;
-    font-size: 2.25rem;
-    font-weight: 500;
-    color: var(--stone-dark);
+  font-family: Ubuntu;
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--stone-dark);
 }
 
 .markdown h3 {
-    font-family: Ubuntu;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 28px;
-    color: var(--stone-dark);
+  font-family: Ubuntu;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--stone-dark);
 }
 
 .markdown h4 {
-    font-family: Ubuntu;
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--stone-dark);
+  font-family: Ubuntu;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--stone-dark);
 }
 
 .markdown text {
-    font-family: Ubuntu;
-    font-size: 1rem;
-    line-height: 150%;
-    font-weight: 400;
-    color: var(--stone);
+  font-family: Ubuntu;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--stone);
 }
 
-.markdown > * + *{
-    margin-top:1rem;
+.markdown > * + * {
+  margin-top: 1rem;
 }
 
-.markdown ul{
-    list-style: disc;
-    margin-left: 1rem;
+.markdown ul {
+  list-style: disc;
+  margin-left: 1rem;
 }
 
-.markdown em{
-    font-style: italic;
+.markdown em {
+  font-style: italic;
 }
-.markdown strong{
-    font-weight: 600;
+.markdown strong {
+  font-weight: 600;
 }

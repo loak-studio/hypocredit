@@ -5,217 +5,217 @@ import Logo from "../atoms/Logo.astro";
 ---
 
 <script>
-    const menuButton = document.querySelector(".menu");
-    const header = document.querySelector("header");
-    const body = document.querySelector("html");
-    menuButton.addEventListener("click", () => {
-        header.classList.toggle("active");
-        body.classList.toggle("no-scroll");
-        window.scrollTo(0, 0);
-    });
+  const menuButton = document.querySelector(".menu");
+  const header = document.querySelector("header");
+  const body = document.querySelector("html");
+  menuButton.addEventListener("click", () => {
+    header.classList.toggle("active");
+    body.classList.toggle("no-scroll");
+    window.scrollTo(0, 0);
+  });
 </script>
 
 <header class="header">
-    <a href="/">
-        <Logo />
-    </a>
-    <nav class="header__navigation">
-        <ul class="header__navigation__list">
-            <HeaderItem href="/">Accueil</HeaderItem>
-            <li class="dropdown">
-                <span class="dropdown__title">
-                    <span class="underline">Produits et services</span>
-                </span>
-                <ul class="dropdown__list">
-                    <li>
-                        <a href="#">Assurances</a>
-                    </li>
-                    <li>
-                        <a href="">Crédits</a>
-                    </li>
-                    <li>
-                        <a href=""> Immobilier</a>
-                    </li>
-                </ul>
-            </li>
-            <HeaderItem href="/infos-et-documents/"
-                >Infos et documents</HeaderItem
-            >
-            <HeaderItem href="/a-propos/">A propos</HeaderItem>
-            <HeaderItem href="/contact/">Contact</HeaderItem>
+  <a href="/">
+    <Logo />
+  </a>
+  <nav class="header__navigation">
+    <ul class="header__navigation__list">
+      <HeaderItem href="/">Accueil</HeaderItem>
+      <li class="dropdown">
+        <span class="dropdown__title">
+          <span class="underline">Produits et services</span>
+        </span>
+        <ul class="dropdown__list">
+          <li>
+            <a class="underline underline--main" href="#">Assurances</a>
+          </li>
+          <li>
+            <a class="underline underline--main" href="">Crédits</a>
+          </li>
+          <li>
+            <a class="underline underline--main" href=""> Immobilier</a>
+          </li>
         </ul>
-    </nav>
-    <div class="header__broker">
-        <Button href="#" target="_blank">Accéder à mes infos</Button>
+      </li>
+      <HeaderItem href="/infos-et-documents/">Infos et documents</HeaderItem>
+      <HeaderItem href="/a-propos/">A propos</HeaderItem>
+      <HeaderItem href="/contact/">Contact</HeaderItem>
+    </ul>
+  </nav>
+  <div class="header__broker">
+    <Button href="#" target="_blank">Accéder à mes infos</Button>
+  </div>
+  <button class="menu">
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <button class="menu">
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <span class="sr-only">Menu</span>
-    </button>
+    <span class="sr-only">Menu</span>
+  </button>
 </header>
 
 <style scoped>
-    .hamburger{
-        width: 2rem;
-        height: 20px;
-        display: flex;
-        flex-direction: column;
-        gap:4px;
-        position: relative;
-        cursor: pointer;
+  .hamburger {
+    width: 2rem;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    cursor: pointer;
+  }
+  .hamburger > * {
+    width: 2rem;
+    height: 4px;
+    background: var(--main);
+    border-radius: 1rem;
+    transition: transform 200ms ease-in-out;
+  }
+  .header.active .menu .hamburger {
+    justify-content: center;
+    align-items: center;
+  }
+  .header.active .menu .hamburger div:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+  }
+  .header.active .menu .hamburger div:nth-child(2) {
+    opacity: 0;
+  }
+  .header.active .menu .hamburger div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+  }
+  .header {
+    flex-wrap: wrap;
+    max-width: 1280px;
+    width: 100%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__navigation .header__navigation__list {
+    display: flex;
+    gap: 28px;
+  }
+
+  .menu {
+    display: none;
+    background: none;
+    border: none;
+  }
+  .dropdown__title {
+    cursor: default;
+  }
+  .dropdown__list a {
+    color: var(--stone-dark);
+  }
+  @media only screen and (max-width: 1300px) {
+    .header {
+      padding: 1rem;
     }
-    .hamburger > *{
-        width: 2rem;
-        height: 4px;
-        background: var(--main);
-        border-radius: 1rem;
-        transition: transform 200ms ease-in-out;
-    }
-    .header.active .menu .hamburger{
-        justify-content: center;
-        align-items: center;
-    }
-    .header.active .menu .hamburger div:nth-child(1){
-        transform: rotate(45deg);
-        position: absolute;
-    }
-    .header.active .menu .hamburger div:nth-child(2){
-        opacity: 0;
-    }
-    .header.active .menu .hamburger div:nth-child(3){
-        transform: rotate(-45deg);
-        position: absolute;
+  }
+  @media only screen and (max-width: 1100px) {
+    .header__navigation {
+      order: 3;
+      margin-top: 1rem;
+      width: 100%;
     }
     .header {
-        flex-wrap: wrap;
-        max-width: 1280px;
-        width: 100%;
-        margin: 3rem auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  .dropdown__title{
+    display: none;
+  }
+  @media screen and (min-width: 809px) {
+  .dropdown__title{
+    display: block;
+  }
+    .dropdown__title::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-chevron-down' width='20' height='20' viewBox='0 0 24 24' stroke-width='1.5' stroke='%232c3e50' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E");
+      width: 20px;
+      height: 15px;
+      margin-left: 10px;
+      display: inline-block;
+      transition: transform 300ms ease-in-out;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown__list {
+      z-index: 25;
+      opacity: 0;
+      overflow: hidden;
+      transition: opacity 300ms ease-in-out;
+      position: absolute;
+      transform: translateY(-200vw);
+      padding: 1rem;
+      width: 100%;
+      border: 1px solid black;
+      background: white;
+    }
+    .dropdown:hover .dropdown__list {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .dropdown__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+  }
+  @media only screen and (max-width: 809px) {
+    .header__navigation {
+      margin: 0rem;
+    }
+    .menu {
+      display: block;
+      z-index: 21;
+    }
+    .header {
+      margin: 1rem auto;
+    }
+    .header__navigation {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      transform: translateX(-300vw);
+      transition: transform 300ms ease-in-out;
+      background: white;
+      z-index: 20;
     }
     .header__navigation .header__navigation__list {
-        display: flex;
-        gap: 28px;
+      flex-direction: column;
+      padding-top: 4rem;
+      padding-left: 4rem;
+      height: 100%;
     }
-
-    .menu {
-        display: none;
-        background: none;
-        border:none;
+    .header__broker {
+      position: fixed;
+      transform: translateX(-300vw);
+      transition: transform 300ms ease-in-out;
+      bottom: 1rem;
+      left: 0;
+      z-index: 22;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0 1rem;
     }
-    .dropdown__title{
-        cursor: default;
+    .active > .header__navigation {
+      transform: translateX(0);
     }
-    .dropdown__list a{
-        color: var(--stone-dark);
-        text-decoration: none;
+    .active > .header__broker {
+      transform: translateX(0vw);
     }
-    .dropdown__list a:hover{
-        text-decoration: underline;
-    }
-    @media only screen and (max-width: 1300px) {
-        .header {
-            padding: 1rem;
-        }
-    }
-    @media only screen and (max-width: 1100px) {
-        .header__navigation {
-            order: 3;
-            margin-top: 1rem;
-            width: 100%;
-        }
-        .header {
-            flex-wrap: wrap;
-        }
-    }
-    @media screen and (min-width: 809px) {
-        .dropdown__title::after {
-            content: "";
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-chevron-down' width='20' height='20' viewBox='0 0 24 24' stroke-width='1.5' stroke='%232c3e50' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E");
-            width: 20px;
-            height: 15px;
-            margin-left: 10px;
-            display: inline-block;
-            transition: transform 300ms ease-in-out;
-        }
-        .dropdown {
-            position: relative;
-        }
-        .dropdown__list {
-            z-index: 25;
-            opacity: 0;
-            overflow: hidden;
-            transition: opacity 300ms ease-in-out;
-            position: absolute;
-            transform: translateY(-200vw);
-            padding: 1rem;
-            width: 100%;
-            border: 1px solid black;
-            background: white;
-        }
-        .dropdown:hover .dropdown__list {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    .dropdown__list{
-        display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 1rem;
-    }
-    @media only screen and (max-width: 809px) {
-        .header__navigation {
-            margin: 0rem;
-        }
-        .menu {
-            display: block;
-            z-index: 21;
-        }
-        .header {
-            margin: 1rem auto;
-        }
-        .header__navigation {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            left: 0;
-            top: 0;
-            transform: translateX(-300vw);
-            transition: transform 300ms ease-in-out;
-            background: white;
-            z-index: 20;
-        }
-        .header__navigation .header__navigation__list {
-            flex-direction: column;
-            padding-top: 4rem;
-            padding-left: 4rem;
-            height: 100%;
-        }
-        .header__broker {
-            position: fixed;
-            transform: translateX(-300vw);
-            transition: transform 300ms ease-in-out;
-            bottom: 1rem;
-            left: 0;
-            z-index: 22;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 0 1rem;
-        }
-        .active > .header__navigation {
-            transform: translateX(0);
-        }
-        .active > .header__broker {
-            transform: translateX(0vw);
-        }
-    }
+  }
 </style>

@@ -1,6 +1,5 @@
 .underline {
   display: inline-flex;
-  flex-direction: column;
   line-height: 150%;
   position: relative;
 }
@@ -29,20 +28,20 @@
 .highlighted--loan {
   color: var(--insurance);
 }
-@media only screen and (max-width:809px){
-  .no-scroll{
+@media only screen and (max-width: 809px) {
+  .no-scroll {
     overflow: hidden;
   }
 }
 
-.sr-only{
+.sr-only {
   position: absolute;
-width: 1px;
-height: 1px;
-padding: 0;
-margin: -1px;
-overflow: hidden;
-clip: rect(0, 0, 0, 0);
-white-space: nowrap;
-border-width: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

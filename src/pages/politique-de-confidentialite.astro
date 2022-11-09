@@ -1,5 +1,5 @@
 ---
-import Main from "../layouts/Main.astro"
+import Main from "../layouts/Main.astro";
 import { marked } from "marked";
 const md = `
 # h1
@@ -12,43 +12,40 @@ const md = `
 
 **bold**
 
-`
+`;
 ---
 
 <Main>
-    <article>
-        <h1 class="h1">Politique de confidentialité</h1>
-        <div class="markdown" set:html={marked.parse(md)}>
-
-        </div>
-    </article>
+  <article>
+    <h1 class="h1">Politique de confidentialité</h1>
+    <div class="markdown" set:html={marked.parse(md)} />
+  </article>
 </Main>
 
 <style scoped>
-    
-    h1{
-        text-align: center;
-        margin: 5rem 0;
+  h1 {
+    text-align: center;
+    margin: 5rem 0;
+  }
+  div {
+    max-width: 622px;
+    margin: 0 auto;
+  }
+  .markdown {
+    padding: 0 1rem;
+  }
+  article {
+    margin: 5rem 0;
+  }
+  @media only screen and (min-width: 809px) {
+    h1 {
+      margin: 0rem 0 10rem 0;
     }
-    div{
-        max-width: 622px;
-        margin: 0 auto;
+    article {
+      margin: 10rem 0;
     }
-    .markdown{
-        padding: 0 1rem;
+    .markdown {
+      padding: 0;
     }
-        article{
-            margin: 5rem 0;
-        }
-    @media only screen and (min-width:809px){
-        h1{
-            margin: 0rem 0 10rem 0;
-        }
-        article{
-            margin: 10rem 0;
-        }
-        .markdown{
-            padding: 0;
-        }
-    }
+  }
 </style>
