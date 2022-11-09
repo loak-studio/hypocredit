@@ -2,6 +2,7 @@
   display: inline-flex;
   flex-direction: column;
   line-height: 150%;
+  position: relative;
 }
 .underline::after {
   content: "";
@@ -10,6 +11,8 @@
   margin-left: -5px;
   transition: all 200ms ease-in-out;
   height: 2px;
+  position: absolute;
+  bottom: -5px;
 }
 .underline:hover::after {
   width: calc(100% + 10px);

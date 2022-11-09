@@ -1,4 +1,5 @@
 ---
+import Breadcrumb from "../components/molecules/Breadcrumb.astro";
 import IndexAbout from "../components/molecules/IndexAbout.astro";
 import IndexMyBroker from "../components/molecules/IndexMyBroker.astro";
 import IndexSolutions from "../components/molecules/IndexSolutions.astro";
@@ -7,6 +8,7 @@ import Main from "../layouts/Main.astro";
 ---
 
 <Main>
+  <Breadcrumb items={[{'href':'#', label:'Prêts'}]} color="loan"/>
   <IndexAbout />
   <IndexSolutions />
   <IndexSpecifity />

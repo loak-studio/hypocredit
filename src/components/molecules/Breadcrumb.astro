@@ -1,0 +1,43 @@
+---
+const {items = [{href:'#', label:'empty'}], color="insurance"}= Astro.props
+---
+
+    <nav class:list={[
+        "breadcrumb",
+        color
+    ]}>
+    <ul class="list">
+        <li>
+            <a class="underline underline--main" href="/">Accueil</a>
+        </li>
+        {items.map(item=>
+            <li>
+                <a class="underline underline--main" href={item.href}>{item.label}</a>
+            </li>
+        )}
+    </ul>
+</nav>
+<style>
+    .breadcrumb{
+        background: var(--background-light);
+        padding:10px 1rem;
+        display: inline-block;
+    }
+    .breadcrumb ul{
+        display: flex;
+    }
+    .list li:not(:last-child)::after{
+        content:'';
+        display: inline-block;
+        height: 13px;
+        width: 8px;
+        margin:0 32px;
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 11.5L6.5 6.5L1.5 1.5' stroke='%234B5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+    .insurance .list li:last-child a{
+        color:var(--insurance);
+    }
+    .loan .list li:last-child a{
+        color:var(--loan);
+    }
+</style>
