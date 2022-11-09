@@ -2,6 +2,15 @@
 import Button from "../atoms/Button.astro";
 import HeaderItem from "../atoms/HeaderItem.astro";
 import Logo from "../atoms/Logo.astro";
+const products = [
+  {
+    name:'Assurances',
+    href:'/assurance/'
+  },  {
+    name:'crédits',
+    href:'/credit/'
+  },
+]
 ---
 
 <script>
@@ -27,15 +36,12 @@ import Logo from "../atoms/Logo.astro";
           <span class="underline">Produits et services</span>
         </span>
         <ul class="dropdown__list">
-          <li>
-            <a class="underline underline--main" href="#">Assurances</a>
-          </li>
-          <li>
-            <a class="underline underline--main" href="">Crédits</a>
-          </li>
-          <li>
-            <a class="underline underline--main" href=""> Immobilier</a>
-          </li>
+          {products.map(product=><li>
+            <a class:list={[
+              "underline underline--main",
+              Astro.url.pathname == product.href ? "underline--active":''
+              ]} href={product.href}>{product.name}</a>
+          </li>)}
         </ul>
       </li>
       <HeaderItem href="/infos-et-documents/">Infos et documents</HeaderItem>

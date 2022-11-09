@@ -3,7 +3,10 @@ const { href = "#" } = Astro.props;
 ---
 
 <li>
-  <a class="underline underline--main" href={href}><slot /></a>
+  <a class:list={[
+    "underline underline--main",
+    Astro.url.pathname == href ? 'underline--active':''
+    ]} href={href}><slot /></a>
 </li>
 
 <style scoped>

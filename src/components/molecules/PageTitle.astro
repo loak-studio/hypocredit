@@ -1,5 +1,5 @@
 ---
-const { items } = Astro.props;
+const { items, color } = Astro.props;
 import Breadcrumb from "./Breadcrumb.astro";
 ---
 
@@ -8,7 +8,7 @@ import Breadcrumb from "./Breadcrumb.astro";
     <h1 class="h1"><slot /></h1>
   </div>
   <div class="breadcrumb">
-    <Breadcrumb items={items} />
+    <Breadcrumb color={color} items={items} />
   </div>
   <figure class="page-title__background">
     <img
@@ -43,6 +43,7 @@ import Breadcrumb from "./Breadcrumb.astro";
   .page-title__title {
     max-width: 600px;
     width: 100%;
+    margin-left:5px;
   }
   .page-title__title .h1 {
     background: white;

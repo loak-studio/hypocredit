@@ -18,6 +18,11 @@
   height: 2px;
 }
 
+.underline--active::after{
+  width: calc(100% + 10px);
+  height: 2px;
+}
+
 .underline--white::after {
   background: currentColor;
 }
@@ -26,6 +31,9 @@
 }
 
 .highlighted--loan {
+  color: var(--loan);
+}
+.highlighted--insurance {
   color: var(--insurance);
 }
 @media only screen and (max-width: 809px) {
