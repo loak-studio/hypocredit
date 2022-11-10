@@ -37,7 +37,7 @@ import WhatsAppWhite from "./icons/WhatsAppWhite.astro";
 </div>
 <style>
     .contact{
-        padding:50px;
+        padding:1rem;
         background: var(--background);
     }
     .contact__title{
@@ -64,5 +64,15 @@ import WhatsAppWhite from "./icons/WhatsAppWhite.astro";
     }
     .contact__social a:hover{
         background: var(--stone-light);
+    }
+    @media screen and (min-width:809px){
+        .contact{
+            padding:2rem;
+        }
+    }
+    @media screen and (min-width:1000px){
+        .contact{
+            padding:50px;
+        }
     }
 </style>
