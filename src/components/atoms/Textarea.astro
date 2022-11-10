@@ -1,0 +1,32 @@
+---
+const {name, placeholder, label = 'label'} = Astro.props
+---
+<div class="textarea">
+    <label class="description textarea__label" for={name}>{label}</label>
+    <textarea placeholder={placeholder} rows="5" class="textarea__textarea"></textarea>
+</div>
+
+<style scoped>
+    .textarea{
+        max-width: 400px;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .textarea__label{
+        display: block;
+    }
+    .textarea__textarea{
+        border: 1px solid var(--stone-light);
+        background: var(--background);
+        padding: 10px;
+        width: 100%;
+        resize: vertical;
+        font-family: Ubuntu;
+    }
+    .textarea__textarea:focus{
+        outline: none;
+        border-color: var(--main);
+
+        background: var(--background-light);
+    }
+</style>
