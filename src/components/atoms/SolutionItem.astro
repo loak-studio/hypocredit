@@ -6,7 +6,11 @@ const { solution } = Astro.props;
 ---
 
 <li class="solution">
-  <div class="solution__logo">
+  <div class:list={[
+    "solution__logo",
+    solution.type =="loan" ? 'loan':'',
+    solution.type =="insurance" ? 'insurance':''
+  ]}>
     <LogoVertical />
   </div>
   <div class="solution__name">
@@ -17,6 +21,12 @@ const { solution } = Astro.props;
 </li>
 
 <style scoped>
+  .solution__logo.loan{
+    color:var(--loan-light);
+  }
+  .solution__logo.insurance{
+    color:var(--insurance-light);
+  }
   .solution {
     display: flex;
     align-items: center;
