@@ -1,0 +1,94 @@
+---
+const schedule = [
+    {day:'Lundi',morning:['8:00','12:00'], afternoon:['13:00', '17:00']},
+    {day:'Mardi',morning:['8:00','12:00'], afternoon:['13:00', '17:00']},
+    {day:'Mercredi',morning:['8:00','12:00'], afternoon:['13:00', '17:00']},
+    {day:'Jeudi',morning:['8:00','12:00'], afternoon:['13:00', '17:00']},
+    {day:'Vendredi',morning:['8:00','12:00'], afternoon:['13:00', '17:00']},
+    {day:'Samedi'},
+    {day:'Dimanche'},
+]
+---
+<div class="schedule">
+    <h3 class="h3 schedule__title">Heures d'ouverture</h3>
+    <ul>
+       {schedule.map(line=>
+        <li class="schedule__line text">
+            <span class="schedule__line__day">{line.day}</span> 
+            {line.morning ?
+                <span >
+                {line.morning.map(time=>
+                        <span class="separator">{time}</span>
+                    )}
+            </span>
+            <span>
+                {line.afternoon.map(time=>
+                        <span class="separator">{time}</span>
+                    )}
+            </span>
+            :
+            <span>Fermé</span>
+            }
+        </li>
+       )}
+    </ul>
+    <p class="description">Rendez-vous le week-end et après 17h uniquement sur rendez-vous.</p>
+</div>
+
+<style>
+.schedule{
+    padding:1rem;
+        background: var(--background-dark)
+    }
+    .schedule__title{
+        margin-bottom: 38px;
+    }
+    .schedule__line{
+        display: grid;
+    }
+
+    .schedule__line + .schedule__line{
+        margin-top: 10px;
+    }
+    .schedule p:last-of-type{
+        margin-top: 10px;
+    }
+
+    .separator:first-child::after{
+        content:'-';
+        margin:0 4px;
+    }
+
+    .schedule__line{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+   
+    @media screen and (min-width:809px){
+        .schedule__line{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .schedule__line__day{
+            grid-row: span 2 / span 2;
+        }
+        .schedule{
+
+            padding:2rem;
+            margin-top: 243px;
+        }
+    }
+    @media screen and (min-width:1000px){
+        .separator:first-child::after{
+        margin:0 20px;
+    }
+        .schedule{
+            padding:50px;
+        }
+        .schedule__line{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .schedule__line__day{
+            grid-row: span 1 / span 1;
+        }
+    }
+</style>

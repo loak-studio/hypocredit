@@ -1,0 +1,40 @@
+---
+import Facebook from "../atoms/icons/Facebook.astro"
+import Instagram from "../atoms/icons/Instagram.astro"
+import WhatsApp from "../atoms/icons/WhatsAppWhite.astro"
+import ContactInformations from "../atoms/ContactInformations.astro"
+import ContactSchedule from "../atoms/ContactSchedule.astro"
+import ContactForm from "../atoms/ContactForm.astro"
+import ContactMap from "../atoms/ContactMap.astro"
+---
+<section class="informations">
+    <div>
+        <ContactSchedule/>
+        <ContactForm/>
+    </div>
+    <div>
+        <ContactInformations/>
+        <ContactMap/>
+    </div>
+</section>
+
+<style scoped>
+    .informations{
+        display: flex;
+        max-width: 1152px;
+        flex-direction: column;
+        width:100%;
+        margin:0 auto;
+    }
+   
+    @media screen and (min-width:809px){
+        .informations{
+            flex-direction: row;
+        }
+        .informations > div{
+        width:50%;
+    }
+    }
+    
+
+</style>

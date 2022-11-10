@@ -1,0 +1,21 @@
+---
+
+import map from "../../assets/map.png"
+---
+<figure class="map">
+    <img src={map} alt="">
+    <a target="_blank" title="Consulter sur Google Maps" class="map__link" href="https://goo.gl/maps/xDK5MntXKeCJNyu6A"></a>
+</figure>
+
+<style>    .map{
+    position: relative;
+    transition: opacity 300ms ease-in-out;
+}
+.map:hover{
+    opacity: 0.7;
+}
+.map__link::before{
+    content:'';
+    position: absolute;
+    inset: 0;
+}</style>
