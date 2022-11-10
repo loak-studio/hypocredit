@@ -1,0 +1,5 @@
+
+a:focus-visible, button:focus-visible{
+    outline: 2px dashed black;
+    outline-offset: 4px;
+}
