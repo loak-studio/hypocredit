@@ -1,10 +1,67 @@
 ---
+import SolutionItem from "../../components/atoms/SolutionItem.astro";
 import PageTitle from "../../components/molecules/PageTitle.astro";
 import Main from "../../layouts/Main.astro";
+
+const credits = [
+  {
+    title: "Prêt hypothéciare",
+    type: "loan",
+    description:
+      "Le prêt à tempérament est un crédit octroyé par les banques ou les organismes de crédit. Une somme d'argent est mise à la disposition du client.",
+  },
+  {
+    title: "Prêt à tempérament",
+    type: "loan",
+    description:
+      "C’est un régime ouvrant droit aux prestations en nature de l'assurance maladie et maternité que peuvent adopter certaines personnes qui sont sans protection sociale et qui résident en France.",
+  },
+];
 ---
 
 <Main>
   <PageTitle color="loan" items={[{ href: "/credit/", label: "Crédit" }]}
     >Nos <span class="highlighted--loan">crédits</span> en tout genre
   </PageTitle>
+  <div class="credit">
+    <p class="text credit__text">
+      Aujourd'hui une multitude d'offres de crédits existent sur le marché. Pas
+      si simple de faire le tri soi - même. Notre expérience de courtier en
+      crédits vous permet de trouver la solution la plus appropriée à vos
+      besoins.
+    </p>
+    <ul class="credit__list">
+      {credits.map((credit) => <SolutionItem solution={credit} />)}
+    </ul>
+  </div>
 </Main>
+
+<style>
+  .credit {
+    max-width: 1094px;
+    width: 100%;
+    margin: 0 auto 5rem auto;
+    padding: 0 1rem;
+  }
+  .credit__text {
+    max-width: 622px;
+    margin-bottom: 3rem;
+  }
+  @media screen and (min-width: 1117px) {
+    .credit {
+      padding: 0;
+      margin: 0 auto 10rem auto;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .credit__list {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  @media only screen and (max-width: 809px) {
+    .credit__list {
+      flex-wrap: wrap;
+    }
+  }
+</style>

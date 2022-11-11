@@ -1,10 +1,69 @@
 ---
+import SolutionItem from "../../components/atoms/SolutionItem.astro";
 import PageTitle from "../../components/molecules/PageTitle.astro";
 import Main from "../../layouts/Main.astro";
+
+const insurances = [
+  {
+    title: "Assurance aux particuliers",
+    type: "insurance",
+    description:
+      "En tant que particulier, il est recommandé de souscrire à plusieurs assurances destinées à nous protéger des tracas plus ou moins graves du quotidien. Face aux très nombreuses offres du marché, il n’est pas toujours simple de s’y retrouver. Nous le faisons pour vous.",
+  },
+  {
+    title: "Assurnace aux indépendants",
+    type: "insurance",
+    description:
+      "En tant qu'indépendant, vous avez tout intérêt à souscrire aux assurances qui s’imposent. Certaines sont obligatoires. D’autres ne le sont pas, mais méritent d’être envisagées.",
+  },
+];
 ---
 
 <Main>
-  <PageTitle items={[{ href: "/assurance/", label: "Assurances" }]}
+  <PageTitle
+    color="insurance"
+    items={[{ href: "/insurance/", label: "Assurance" }]}
     >Nos <span class="highlighted--insurance">assurances</span> en tout genre
   </PageTitle>
+  <div class="insurance">
+    <p class="text insurance__text">
+      Aujourd'hui une multitude d'offres de crédits existent sur le marché. Pas
+      si simple de faire le tri soi - même. Notre expérience de courtier en
+      crédits vous permet de trouver la solution la plus appropriée à vos
+      besoins.
+    </p>
+    <ul class="insurance__list">
+      {insurances.map((insurance) => <SolutionItem solution={insurance} />)}
+    </ul>
+  </div>
 </Main>
+
+<style>
+  .insurance {
+    max-width: 1094px;
+    width: 100%;
+    margin: 0 auto 5rem auto;
+    padding: 0 1rem;
+  }
+  .insurance__text {
+    max-width: 622px;
+    margin-bottom: 3rem;
+  }
+  @media screen and (min-width: 1117px) {
+    .insurance {
+      padding: 0;
+      margin: 0 auto 10rem auto;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .insurance__list {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  @media only screen and (max-width: 809px) {
+    .insurance__list {
+      flex-wrap: wrap;
+    }
+  }
+</style>
