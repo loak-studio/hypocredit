@@ -1,8 +1,10 @@
 ---
 import Facebook from "./icons/Facebook.astro";
 import Instagram from "./icons/Instagram.astro";
-import WhatsAppWhite from "./icons/WhatsAppWhite.astro";
-
+import Mail from "./icons/Mail.astro";
+import Map from "./icons/Map.astro";
+import Phone from "./icons/Phone.astro";
+import WhatsApp from "./icons/WhatsApp.astro";
 ---
 
 <div class="contact">
@@ -10,16 +12,18 @@ import WhatsAppWhite from "./icons/WhatsAppWhite.astro";
     <p class="text">Nous nous tenons à votre service pour répondra à toutes vos questions.</p>
     <ul class="contact__informations">
         <li>
-            <a class="text"  href="">+32 56 33 23 66</a>
-        </li>
-        <li>
-            <a  class="text" href="">
-                info@mdassurances.be
+            <a class="text contact__informations__item"  href="">
+                <span class="icon"><Phone size="25"/></span> <span class="underline underline--main">+32 56 33 23 66</span>
             </a>
         </li>
         <li>
-            <a  class="text" href="">
-                Rue du Rucquoy 2 bte 1,7700 Mouscon Belgique
+            <a  class="text contact__informations__item" href="">
+                <span class="icon"><Mail size="25"/></span> <span class="underline underline--main">info@mdassurances.be</span>
+            </a>
+        </li>
+        <li>
+            <a  class="text contact__informations__item" href="">
+                <span class="icon"><Map size="25"/></span> <span class="underline underline--main">Rue du Rucquoy 2 bte 1,7700 Mouscon Belgique</span>
             </a>
         </li>
     </ul>
@@ -31,7 +35,7 @@ import WhatsAppWhite from "./icons/WhatsAppWhite.astro";
             <a title="Instagram" target="_blank" href="https://instagram.com"><Instagram/></a>
         </li>
         <li>
-            <a title="WhatsApp" target="_blank" href="#"><WhatsAppWhite/></a>
+            <a title="WhatsApp" target="_blank" href="#"><WhatsApp/></a>
         </li>
     </ul>
 </div>
@@ -50,6 +54,9 @@ import WhatsAppWhite from "./icons/WhatsAppWhite.astro";
     .contact__informations > li{
         margin-top: 1rem;
     }
+    .contact__social > li > a{
+        color:white;
+    }
     .contact__social a{
         background: var(--stone);
         display: flex;
@@ -64,6 +71,14 @@ import WhatsAppWhite from "./icons/WhatsAppWhite.astro";
     }
     .contact__social a:hover{
         background: var(--stone-light);
+    }
+    .contact__informations__item{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .icon{
+        color: var(--main);
     }
     @media screen and (min-width:809px){
         .contact{

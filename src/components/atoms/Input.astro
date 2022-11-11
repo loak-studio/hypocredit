@@ -3,7 +3,7 @@ const {name, placeholder, label = 'label', type='text'} = Astro.props
 ---
 <div class="input">
     <label class="description input__label" for={name}>{label}</label>
-    <input placeholder={placeholder} type={type} class="input__input">
+    <input placeholder={placeholder} type={type} id={name} class="input__input">
 </div>
 
 <style scoped>

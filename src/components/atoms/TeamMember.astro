@@ -14,20 +14,20 @@ const {member} = Astro.props
     <ul class="member__contact">
         {member.contact_infos.email &&
         <li>
-            <a title="Email" href={"mailto:"+member.contact_infos.email}><Mail/></a>
+            <a title="Email" href={"mailto:"+member.contact_infos.email}><Mail size="30"/></a>
         </li>
         }
         {member.contact_infos.whatsapp &&
         <li>
             <a title="WhatsApp" href={"https://wa.me/" + member.contact_infos.whatsapp}>
-                <Whatsapp/>
+                <Whatsapp size="30"/>
             </a>
         </li>
         }
         {member.contact_infos.tel &&
             <li>
             <a title="Téléphone" href={"tel:" + member.contact_infos.tel}>
-                <Phone/>
+                <Phone size="30"/>
             </a>
         </li>
         }
@@ -51,7 +51,10 @@ const {member} = Astro.props
         margin-top: 15px;
     }
     .member__contact > *{
-        transition: transform 200ms ease-in-out
+        transition: transform 200ms ease-in-out;
+    }
+    .member__contact > li > a{
+        color:var(--main);
     }
     .member__contact > *:hover{
         transform: scale(1.1);

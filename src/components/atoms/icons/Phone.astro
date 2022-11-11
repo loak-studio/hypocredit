@@ -1,16 +1,7 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_542_905)">
-    <g clip-path="url(#clip1_542_905)">
-    <path d="M5 4.00024H9L11 9.00024L8.5 10.5002C9.57096 12.6718 11.3285 14.4293 13.5 15.5002L15 13.0002L20 15.0002V19.0002C20 19.5307 19.7893 20.0394 19.4142 20.4145C19.0391 20.7895 18.5304 21.0002 18 21.0002C14.0993 20.7632 10.4202 19.1067 7.65683 16.3434C4.8935 13.5801 3.23705 9.90098 3 6.00024C3 5.46981 3.21071 4.9611 3.58579 4.58603C3.96086 4.21096 4.46957 4.00024 5 4.00024" stroke="#0A4370" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-    </g>
-    <defs>
-    <clipPath id="clip0_542_905">
-    <rect width="24" height="24" fill="white" transform="translate(0 0.000244141)"/>
-    </clipPath>
-    <clipPath id="clip1_542_905">
-    <rect width="24" height="24" fill="white" transform="translate(0 0.000244141)"/>
-    </clipPath>
-    </defs>
-    </svg>
-    
+---
+const {size = 44} = Astro.props
+---
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+  </svg>

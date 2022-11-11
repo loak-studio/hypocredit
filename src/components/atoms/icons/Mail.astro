@@ -1,12 +1,8 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_542_895)">
-    <path d="M19 5.00061H5C3.89543 5.00061 3 5.89604 3 7.00061V17.0006C3 18.1052 3.89543 19.0006 5 19.0006H19C20.1046 19.0006 21 18.1052 21 17.0006V7.00061C21 5.89604 20.1046 5.00061 19 5.00061Z" stroke="#0A4370" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3 6.99988L12 12.9999L21 6.99988" stroke="#0A4370" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-    <defs>
-    <clipPath id="clip0_542_895">
-    <rect width="24" height="24" fill="white" transform="translate(0 0.000244141)"/>
-    </clipPath>
-    </defs>
-    </svg>
-    
+---
+const {size = 44} = Astro.props
+---
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <rect x="3" y="5" width="18" height="14" rx="2" />
+    <polyline points="3 7 12 13 21 7" />
+  </svg>
