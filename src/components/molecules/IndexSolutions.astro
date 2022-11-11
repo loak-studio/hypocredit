@@ -7,13 +7,13 @@ import SolutionItem from "../atoms/SolutionItem.astro";
 const solutions = [
   {
     title: "crédits",
-    type:'loan',
+    type: "loan",
     description:
       "Le prêt à tempérament est un crédit octroyé par les banques ou les organismes de crédit. Une somme d'argent est mise à la disposition du client.",
   },
   {
     title: "assurances",
-    type:'insurance',
+    type: "insurance",
     description:
       "C’est un régime ouvrant droit aux prestations en nature de l'assurance maladie et maternité que peuvent adopter certaines personnes qui sont sans protection sociale et qui résident en France.",
   },
@@ -30,7 +30,11 @@ const solutions = [
   <ul class="solutions__list">
     {solutions.map((solution) => <SolutionItem solution={solution} />)}
   </ul>
-  <div class="solutions__dots rellax" data-rellax-speed="3" data-rellax-percentage="0.5">
+  <div
+    class="solutions__dots rellax"
+    data-rellax-speed="3"
+    data-rellax-percentage="0.5"
+  >
     <Dots />
   </div>
 </section>

@@ -5,11 +5,12 @@ import PageTitle from "../components/molecules/PageTitle.astro";
 import Main from "../layouts/Main.astro";
 ---
 
-<Main meta={{title:'A propos'}}>
-  <PageTitle
-    items={[{ href: "/a-propos/", label: "A propos" }]}
-  >Notre équipe vous accompagne dans tous <span class="highlighted--insurance">vos projets</span>
+<Main meta={{ title: "A propos" }}>
+  <PageTitle items={[{ href: "/a-propos/", label: "A propos" }]}
+    >Notre équipe vous accompagne dans tous <span class="highlighted--insurance"
+      >vos projets</span
+    >
   </PageTitle>
-  <AboutPresentation/>
-  <AboutTeam/>
+  <AboutPresentation />
+  <AboutTeam />
 </Main>

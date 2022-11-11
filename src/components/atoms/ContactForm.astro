@@ -3,37 +3,39 @@ import Button from "./Button.astro";
 import Checkbox from "./Checkbox.astro";
 import Input from "./Input.astro";
 import Textarea from "./Textarea.astro";
-
 ---
 
 <form class="form">
-    <h3 class="h3">Nous envoyer un message</h3>
-    <Input label="Nom" name="lastname"/>
-    <Input label="Prénom" name="firstname"/>
-    <Input label="Nom" name="nom"/>
-    <Textarea label="Message" name="message"/>
-    <Checkbox name="ok">
-        En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées dans le cadre de la demande de crédit et conforme à notre <a class="form__a" href="#">règlement général de protection des données (RGPD)</a>
-
-    </Checkbox>
-    <Button>Envoyer</Button>
+  <h3 class="h3">Nous envoyer un message</h3>
+  <Input label="Nom" name="lastname" />
+  <Input label="Prénom" name="firstname" />
+  <Input label="Nom" name="nom" />
+  <Textarea label="Message" name="message" />
+  <Checkbox name="ok">
+    En soumettant ce formulaire, j’accepte que les informations saisies soient
+    exploitées dans le cadre de la demande de crédit et conforme à notre <a
+      class="form__a"
+      href="#">règlement général de protection des données (RGPD)</a
+    >
+  </Checkbox>
+  <Button>Envoyer</Button>
 </form>
 <style>
-    .form{
-        padding:1rem;
-        background: var(--background);
-    }   
-    .form__a{
-        text-decoration: underline;
+  .form {
+    padding: 1rem;
+    background: var(--background);
+  }
+  .form__a {
+    text-decoration: underline;
+  }
+  @media screen and (min-width: 809px) {
+    .form {
+      padding: 2rem;
     }
-    @media screen and (min-width:809px){
-        .form{
-            padding:2rem;
-        }
+  }
+  @media screen and (min-width: 1000px) {
+    .form {
+      padding: 50px;
     }
-    @media screen and (min-width:1000px){
-        .form{
-            padding:50px;
-        }
-    }
-    </style>
+  }
+</style>

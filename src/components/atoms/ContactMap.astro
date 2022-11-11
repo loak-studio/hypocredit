@@ -1,21 +1,27 @@
 ---
-
-import map from "../../assets/map.png"
+import map from "../../assets/map.png";
 ---
+
 <figure class="map">
-    <img src={map} alt="">
-    <a target="_blank" title="Consulter sur Google Maps" class="map__link" href="https://goo.gl/maps/hh1moKSmCpDDTDVU8"></a>
+  <img src={map} alt="" />
+  <a
+    target="_blank"
+    title="Consulter sur Google Maps"
+    class="map__link"
+    href="https://goo.gl/maps/hh1moKSmCpDDTDVU8"></a>
 </figure>
 
-<style>    .map{
+<style>
+  .map {
     position: relative;
     transition: opacity 300ms ease-in-out;
-}
-.map:hover{
+  }
+  .map:hover {
     opacity: 0.7;
-}
-.map__link::before{
-    content:'';
+  }
+  .map__link::before {
+    content: "";
     position: absolute;
     inset: 0;
-}</style>
+  }
+</style>

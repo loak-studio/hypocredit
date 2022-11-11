@@ -8,86 +8,97 @@ import WhatsApp from "./icons/WhatsApp.astro";
 ---
 
 <div class="contact">
-    <h2 class="h2 contact__title">Contactez-nous</h2>
-    <p class="text">Nous nous tenons à votre service pour répondra à toutes vos questions.</p>
-    <ul class="contact__informations">
-        <li>
-            <a class="text contact__informations__item"  href="">
-                <span class="icon"><Phone size="25"/></span> <span class="underline underline--main">+32 56 33 23 66</span>
-            </a>
-        </li>
-        <li>
-            <a  class="text contact__informations__item" href="">
-                <span class="icon"><Mail size="25"/></span> <span class="underline underline--main">info@mdassurances.be</span>
-            </a>
-        </li>
-        <li>
-            <a  class="text contact__informations__item" href="">
-                <span class="icon"><Map size="25"/></span> <span class="underline underline--main">Rue du Rucquoy 2 bte 1,7700 Mouscon Belgique</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="contact__social">
-        <li>
-            <a title="Facebook" target="_blank" href="https://facebook.com"><Facebook/></a>
-        </li>
-        <li>
-            <a title="Instagram" target="_blank" href="https://instagram.com"><Instagram/></a>
-        </li>
-        <li>
-            <a title="WhatsApp" target="_blank" href="#"><WhatsApp/></a>
-        </li>
-    </ul>
+  <h2 class="h2 contact__title">Contactez-nous</h2>
+  <p class="text">
+    Nous nous tenons à votre service pour répondra à toutes vos questions.
+  </p>
+  <ul class="contact__informations">
+    <li>
+      <a class="text contact__informations__item" href="">
+        <span class="icon"><Phone size="25" /></span>
+        <span class="underline underline--main">+32 56 33 23 66</span>
+      </a>
+    </li>
+    <li>
+      <a class="text contact__informations__item" href="">
+        <span class="icon"><Mail size="25" /></span>
+        <span class="underline underline--main">info@mdassurances.be</span>
+      </a>
+    </li>
+    <li>
+      <a class="text contact__informations__item" href="">
+        <span class="icon"><Map size="25" /></span>
+        <span class="underline underline--main"
+          >Rue du Rucquoy 2 bte 1,7700 Mouscon Belgique</span
+        >
+      </a>
+    </li>
+  </ul>
+  <ul class="contact__social">
+    <li>
+      <a title="Facebook" target="_blank" href="https://facebook.com"
+        ><Facebook />
+      </a>
+    </li>
+    <li>
+      <a title="Instagram" target="_blank" href="https://instagram.com"
+        ><Instagram />
+      </a>
+    </li>
+    <li>
+      <a title="WhatsApp" target="_blank" href="#"><WhatsApp /></a>
+    </li>
+  </ul>
 </div>
 <style>
-    .contact{
-        padding:1rem;
-        background: var(--background);
+  .contact {
+    padding: 1rem;
+    background: var(--background);
+  }
+  .contact__title {
+    margin-bottom: 3rem;
+  }
+  .contact__social {
+    margin-top: 3rem;
+    display: flex;
+  }
+  .contact__informations > li {
+    margin-top: 1rem;
+  }
+  .contact__social > li > a {
+    color: white;
+  }
+  .contact__social a {
+    background: var(--stone);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    transition: background 300ms ease-in-out;
+  }
+  .contact__social a:hover {
+    background: var(--stone-light);
+  }
+  .contact__informations__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .icon {
+    color: var(--main);
+  }
+  @media screen and (min-width: 809px) {
+    .contact {
+      padding: 2rem;
     }
-    .contact__title{
-        margin-bottom: 3rem;
+  }
+  @media screen and (min-width: 1000px) {
+    .contact {
+      padding: 50px;
     }
-    .contact__social{
-        margin-top: 3rem;
-        display: flex;
-    }
-    .contact__informations > li{
-        margin-top: 1rem;
-    }
-    .contact__social > li > a{
-        color:white;
-    }
-    .contact__social a{
-        background: var(--stone);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        padding:10px;
-        width:40px;
-        height: 40px;
-        transition:background 300ms ease-in-out
-    }
-    .contact__social a:hover{
-        background: var(--stone-light);
-    }
-    .contact__informations__item{
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-    .icon{
-        color: var(--main);
-    }
-    @media screen and (min-width:809px){
-        .contact{
-            padding:2rem;
-        }
-    }
-    @media screen and (min-width:1000px){
-        .contact{
-            padding:50px;
-        }
-    }
+  }
 </style>

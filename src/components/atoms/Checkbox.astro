@@ -1,23 +1,24 @@
 ---
-const {name, label = 'label'} = Astro.props
+const { name, label = "label" } = Astro.props;
 ---
+
 <div class="checkbox">
-    <input class="checkbox__checkbox" type="checkbox" name={name} id={name}>
-    <label for={name} class="checkbox__label text"><slot/></label>
+  <input class="checkbox__checkbox" type="checkbox" name={name} id={name} />
+  <label for={name} class="checkbox__label text"><slot /></label>
 </div>
 
 <style>
-    .checkbox{
-        display: flex;
-        gap:12px;
-        align-items: flex-start;
-        margin: 38px 0;
-    }
-    .checkbox__checkbox{
-        margin:10px;
-        display: block;
-    }
-    .checkbox__label{
-        max-width: 352px;
-    }
+  .checkbox {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin: 38px 0;
+  }
+  .checkbox__checkbox {
+    margin: 10px;
+    display: block;
+  }
+  .checkbox__label {
+    max-width: 352px;
+  }
 </style>

@@ -18,7 +18,7 @@
   height: 2px;
 }
 
-.underline--active::after{
+.underline--active::after {
   width: calc(100% + 10px);
   height: 2px;
 }

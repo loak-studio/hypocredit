@@ -1,73 +1,76 @@
 ---
-import Facebook from "../atoms/icons/Facebook.astro"
-import Instagram from "../atoms/icons/Instagram.astro"
-import WhatsApp from "../atoms/icons/WhatsAppWhite.astro"
-import ContactInformations from "../atoms/ContactInformations.astro"
-import ContactSchedule from "../atoms/ContactSchedule.astro"
-import ContactForm from "../atoms/ContactForm.astro"
-import ContactMap from "../atoms/ContactMap.astro"
-import Ring from "../atoms/Ring.astro"
-import Dots from "../atoms/Dots.astro"
+import Facebook from "../atoms/icons/Facebook.astro";
+import Instagram from "../atoms/icons/Instagram.astro";
+import WhatsApp from "../atoms/icons/WhatsAppWhite.astro";
+import ContactInformations from "../atoms/ContactInformations.astro";
+import ContactSchedule from "../atoms/ContactSchedule.astro";
+import ContactForm from "../atoms/ContactForm.astro";
+import ContactMap from "../atoms/ContactMap.astro";
+import Ring from "../atoms/Ring.astro";
+import Dots from "../atoms/Dots.astro";
 ---
+
 <section class="informations">
-    <div class="top-ring decoration">
-        <Ring/>
-    </div>
-    <div class="bottom-ring decoration">
-        <Ring/>
-    </div>
-    <div class="dots decoration rellax" data-rellax-speed="2" data-rellax-percentage="0.5">
-        <Dots/>
-    </div>
-    <div>
-        <ContactSchedule/>
-        <ContactForm/>
-    </div>
-    <div>
-        <ContactInformations/>
-        <ContactMap/>
-    </div>
+  <div class="top-ring decoration">
+    <Ring />
+  </div>
+  <div class="bottom-ring decoration">
+    <Ring />
+  </div>
+  <div
+    class="dots decoration rellax"
+    data-rellax-speed="2"
+    data-rellax-percentage="0.5"
+  >
+    <Dots />
+  </div>
+  <div>
+    <ContactSchedule />
+    <ContactForm />
+  </div>
+  <div>
+    <ContactInformations />
+    <ContactMap />
+  </div>
 </section>
 
 <style scoped>
-    .decoration{
-        z-index: -1;
-    }
-    .top-ring{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        top:100px;
-    }
-    .bottom-ring{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        bottom:268px;
-    }
-    .dots{
-        position: absolute;
-        bottom:0;
-        right:0;
-    }
-    .informations{
-        display: flex;
-        max-width: 1152px;
-        flex-direction: column;
-        width:100%;
-        position:relative;
-        margin:0 auto 5rem auto;
-    }
-   
-    @media screen and (min-width:809px){
-        .informations{
-            flex-direction: row;
-        margin:0 auto 10rem auto;
-        }
-        .informations > div:not(.decoration){
-        width:50%;
-    }
-    }
-    
+  .decoration {
+    z-index: -1;
+  }
+  .top-ring {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 100px;
+  }
+  .bottom-ring {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 268px;
+  }
+  .dots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .informations {
+    display: flex;
+    max-width: 1152px;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin: 0 auto 5rem auto;
+  }
 
+  @media screen and (min-width: 809px) {
+    .informations {
+      flex-direction: row;
+      margin: 0 auto 10rem auto;
+    }
+    .informations > div:not(.decoration) {
+      width: 50%;
+    }
+  }
 </style>

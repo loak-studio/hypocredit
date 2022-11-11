@@ -3,70 +3,85 @@ import Mail from "./icons/Mail.astro";
 import Phone from "./icons/Phone.astro";
 import Whatsapp from "./icons/WhatsApp.astro";
 
-const {member} = Astro.props
+const { member } = Astro.props;
 ---
+
 <div class="member">
-    <figure class="member__picture">
-        <img src={import.meta.env.API + member.profile_picture.data.attributes.url} alt="">
-    </figure>
-    <h3 class="h3 member__name">{member.full_name}</h3>
-    <span class="text">{member.role}</span>
-    <ul class="member__contact">
-        {member.contact_infos.email &&
+  <figure class="member__picture">
+    <img
+      src={import.meta.env.API + member.profile_picture.data.attributes.url}
+      alt=""
+    />
+  </figure>
+  <h3 class="h3 member__name">{member.full_name}</h3>
+  <span class="text">{member.role}</span>
+  <ul class="member__contact">
+    {
+      member.contact_infos.email && (
         <li>
-            <a title="Email" href={"mailto:"+member.contact_infos.email}><Mail size="30"/></a>
+          <a title="Email" href={"mailto:" + member.contact_infos.email}>
+            <Mail size="30" />
+          </a>
         </li>
-        }
-        {member.contact_infos.whatsapp &&
+      )
+    }
+    {
+      member.contact_infos.whatsapp && (
         <li>
-            <a title="WhatsApp" href={"https://wa.me/" + member.contact_infos.whatsapp}>
-                <Whatsapp size="30"/>
-            </a>
+          <a
+            title="WhatsApp"
+            href={"https://wa.me/" + member.contact_infos.whatsapp}
+          >
+            <Whatsapp size="30" />
+          </a>
         </li>
-        }
-        {member.contact_infos.tel &&
-            <li>
-            <a title="Téléphone" href={"tel:" + member.contact_infos.tel}>
-                <Phone size="30"/>
-            </a>
+      )
+    }
+    {
+      member.contact_infos.tel && (
+        <li>
+          <a title="Téléphone" href={"tel:" + member.contact_infos.tel}>
+            <Phone size="30" />
+          </a>
         </li>
-        }
-    </ul>
+      )
+    }
+  </ul>
 </div>
 
 <style>
-    .member{
-        position: relative;
+  .member {
+    position: relative;
+  }
+  .member__picture {
+    max-width: 350px;
+    width: 100%;
+  }
+  .member__name {
+    margin: 24px 0 4px 0;
+  }
+  .member__contact {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .member__contact > * {
+    transition: transform 200ms ease-in-out;
+  }
+  .member__contact > li > a {
+    color: var(--main);
+  }
+  .member__contact > *:hover {
+    transform: scale(1.1);
+  }
+  @media screen and (min-width: 385px) {
+    .member {
+      padding: 0rem;
     }
-    .member__picture{
-        max-width: 350px;
-        width: 100%;
+    .member__contact {
+      right: 0rem;
+      bottom: 0;
+      position: absolute;
     }
-    .member__name{
-        margin: 24px 0 4px 0;
-    }
-    .member__contact{
-        display: flex;
-        gap:15px;
-        margin-top: 15px;
-    }
-    .member__contact > *{
-        transition: transform 200ms ease-in-out;
-    }
-    .member__contact > li > a{
-        color:var(--main);
-    }
-    .member__contact > *:hover{
-        transform: scale(1.1);
-    }
-    @media screen and (min-width:385px){
-        .member{
-            padding:0rem;
-        }
-        .member__contact{
-            right:0rem;
-            bottom:0;
-            position: absolute;
-        }
-    }
+  }
 </style>

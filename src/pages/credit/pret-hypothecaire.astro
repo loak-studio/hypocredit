@@ -1,13 +1,15 @@
 ---
 import PageTitle from "../../components/molecules/PageTitle.astro";
-import Main from "../../layouts/Main.astro"
-
+import Main from "../../layouts/Main.astro";
 ---
 
 <Main>
-    <PageTitle
-    items={[{ href: "/credits/", label: "Crédits" }, {href:'/credit/pret-hypothecaire/', label:'Prêt hypothécaire'}]}
+  <PageTitle
+    items={[
+      { href: "/credits/", label: "Crédits" },
+      { href: "/credit/pret-hypothecaire/", label: "Prêt hypothécaire" },
+    ]}
     color="loan"
-  >Nos <span class="highlighted--loan">prêts à hypothécaires</span>
+    >Nos <span class="highlighted--loan">prêts à hypothécaires</span>
   </PageTitle>
 </Main>

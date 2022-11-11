@@ -1,13 +1,15 @@
 ---
 import PageTitle from "../../components/molecules/PageTitle.astro";
-import Main from "../../layouts/Main.astro"
-
+import Main from "../../layouts/Main.astro";
 ---
 
 <Main>
-    <PageTitle
-    items={[{ href: "/assurance/", label: "Assurances" }, {href:'/assurance/particuliers/', label:'Assurances particuliers'}]}
+  <PageTitle
+    items={[
+      { href: "/assurance/", label: "Assurances" },
+      { href: "/assurance/particuliers/", label: "Assurances particuliers" },
+    ]}
     color="insurance"
-  >Nos <span class="highlighted--insurance">assurances particuliers</span>
+    >Nos <span class="highlighted--insurance">assurances particuliers</span>
   </PageTitle>
 </Main>

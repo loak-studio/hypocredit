@@ -4,108 +4,104 @@ import Ring from "../atoms/Ring.astro";
 ---
 
 <section class="presentation">
-    <div class="container presentation__first">
-        <div class="presentation__first__ring">
-            <Ring />
-        </div>
-        <h2 class="h2">Qui sommes-nous ?</h2>
-        <p class="text">Qui est votre courtier Hypo Crédit ?</p>
-        <p class="text">
-            Nous sommes un bureau d'assurances et de crédits indépendant qui
-            recherche la solution la plus avantageuse pour vos projets.
-        </p>
-        <p class="text">
-            Indépendant signifie que nous sollicitons pour vous notre réseau de
-            partenaires pour que vous ayez la meilleur offre car nous ne sommes
-            lié à aucune compagnie bien déterminée.
-        </p>
+  <div class="container presentation__first">
+    <div class="presentation__first__ring">
+      <Ring />
     </div>
-    <div class="container presentation__second">
-        <div class="presentation__second__ring">
-            <Ring />
-        </div>
-        <h3 class="h3">Notre engagement c'est l'impartialité</h3>
-        <p class="text">Vous souhaitez un check-up de vos assurances?</p>
-        <p class="text">
-            Vous avez un nouveau projet immobilier, ou vous voulez préparer
-            l'avenir?
-        </p>
-        <p class="text">
-            Prenez contact avec l'un de nos collaborateurs et nous serons
-            heureux d'étudier ensemble vos projets!
-        </p>
-        <Button href="/contact/">Nous contacter</Button>
+    <h2 class="h2">Qui sommes-nous ?</h2>
+    <p class="text">Qui est votre courtier Hypo Crédit ?</p>
+    <p class="text">
+      Nous sommes un bureau d'assurances et de crédits indépendant qui recherche
+      la solution la plus avantageuse pour vos projets.
+    </p>
+    <p class="text">
+      Indépendant signifie que nous sollicitons pour vous notre réseau de
+      partenaires pour que vous ayez la meilleur offre car nous ne sommes lié à
+      aucune compagnie bien déterminée.
+    </p>
+  </div>
+  <div class="container presentation__second">
+    <div class="presentation__second__ring">
+      <Ring />
     </div>
+    <h3 class="h3">Notre engagement c'est l'impartialité</h3>
+    <p class="text">Vous souhaitez un check-up de vos assurances?</p>
+    <p class="text">
+      Vous avez un nouveau projet immobilier, ou vous voulez préparer l'avenir?
+    </p>
+    <p class="text">
+      Prenez contact avec l'un de nos collaborateurs et nous serons heureux
+      d'étudier ensemble vos projets!
+    </p>
+    <Button href="/contact/">Nous contacter</Button>
+  </div>
 </section>
 
 <style scoped>
-
+  .presentation {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  .container > h2,
+  .container > h3 {
+    margin-bottom: 38px;
+  }
+  .container > p + p {
+    margin-top: 1rem;
+  }
+  .presentation__first {
+    background: var(--background-dark);
+    padding: 2rem 1rem;
+  }
+  .presentation__second {
+    background: var(--background);
+    padding: 2rem 1rem;
+  }
+  .presentation__second > p:last-of-type {
+    margin-bottom: 38px;
+  }
+  .presentation__first__ring {
+    position: absolute;
+    right: -125px;
+    top: 56px;
+    z-index: -1;
+  }
+  .presentation__second__ring {
+    position: absolute;
+    left: -125px;
+    bottom: 25px;
+    z-index: -1;
+  }
+  @media screen and (min-width: 809px) {
     .presentation {
-        max-width: 1280px;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .container {
-        position: relative;
-        width: 100%;
-    }
-    .container > h2,
-    .container > h3 {
-        margin-bottom: 38px;
-    }
-    .container > p + p {
-        margin-top: 1rem;
+      flex-direction: row;
     }
     .presentation__first {
-        background: var(--background-dark);
-        padding: 2rem 1rem;
+      padding: 2rem;
     }
     .presentation__second {
-        background: var(--background);
-        padding: 2rem 1rem;
+      padding: 2rem;
+      margin-top: 10rem;
     }
-    .presentation__second > p:last-of-type {
-        margin-bottom: 38px;
+  }
+  @media screen and (min-width: 1000px) {
+    .presentation__first {
+      padding: 75px;
     }
-    .presentation__first__ring {
-        position: absolute;
-        right: -125px;
-        top: 56px;
-        z-index: -1;
+    .presentation__second {
+      margin-top: 10rem;
+      padding: 50px;
     }
-    .presentation__second__ring {
-        position: absolute;
-        left: -125px;
-        bottom: 25px;
-        z-index: -1;
+    .container {
+      width: 50%;
     }
-    @media screen and (min-width: 809px){
-        .presentation{
-            flex-direction: row;
-        }
-        .presentation__first {
-            padding: 2rem;
-        }
-        .presentation__second{
-            padding:2rem;
-            margin-top: 10rem;
-        }
-    }
-    @media screen and (min-width: 1000px) {
-        .presentation__first {
-            padding: 75px;
-        }
-        .presentation__second {
-            margin-top: 10rem;
-            padding: 50px;
-        }
-        .container{
-
-        width: 50%;
-        }
-    }
-
+  }
 </style>

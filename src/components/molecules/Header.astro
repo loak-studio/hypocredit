@@ -4,13 +4,14 @@ import HeaderItem from "../atoms/HeaderItem.astro";
 import Logo from "../atoms/Logo.astro";
 const products = [
   {
-    name:'Assurances',
-    href:'/assurance/'
-  },  {
-    name:'Crédits',
-    href:'/credit/'
+    name: "Assurances",
+    href: "/assurance/",
   },
-]
+  {
+    name: "Crédits",
+    href: "/credit/",
+  },
+];
 ---
 
 <script>
@@ -36,12 +37,23 @@ const products = [
           <button><span class="underline">Produits et services</span></button>
         </span>
         <ul class="dropdown__list">
-          {products.map(product=><li>
-            <a class:list={[
-              "underline underline--main",
-              Astro.url.pathname == product.href ? "underline--active":''
-              ]} href={product.href}>{product.name}</a>
-          </li>)}
+          {
+            products.map((product) => (
+              <li>
+                <a
+                  class:list={[
+                    "underline underline--main",
+                    Astro.url.pathname == product.href
+                      ? "underline--active"
+                      : "",
+                  ]}
+                  href={product.href}
+                >
+                  {product.name}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </li>
       <HeaderItem href="/infos-et-documents/">Infos et documents</HeaderItem>
@@ -119,9 +131,9 @@ const products = [
   .dropdown__list a {
     color: var(--stone-dark);
   }
-  .dropdown__list:focus-within{
+  .dropdown__list:focus-within {
     opacity: 1;
-      transform: translateY(0);
+    transform: translateY(0);
   }
   @media only screen and (max-width: 1300px) {
     .header {
