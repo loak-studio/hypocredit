@@ -1,5 +1,6 @@
 ---
 const { items, color } = Astro.props;
+import Dots from "../atoms/Dots.astro";
 import Breadcrumb from "./Breadcrumb.astro";
 ---
 
@@ -16,9 +17,17 @@ import Breadcrumb from "./Breadcrumb.astro";
       alt=""
     />
   </figure>
+  <div class="page-title__dots">
+    <Dots/>
+  </div>
 </section>
 
 <style>
+  .page-title__dots{
+    position: absolute;
+    right: -78px;
+    z-index: -2;
+  }
   .page-title__background {
     position: absolute;
     inset: 0;
@@ -33,7 +42,6 @@ import Breadcrumb from "./Breadcrumb.astro";
     object-position: center;
   }
   .page-title {
-    overflow: hidden;
     max-width: 1152px;
     margin: 0px auto 50px auto;
     width: 100%;
