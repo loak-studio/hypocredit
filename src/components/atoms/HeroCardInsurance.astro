@@ -1,0 +1,39 @@
+---
+import HeroBadge from "./HeroBadge.astro";
+
+---
+
+<div class="card">
+    <h3 class="h4">Nos assurances</h3>
+    <ul>
+        <li class="card__list__item">
+            <a href="#" class="text underline underline--main">Aux particuliers</a>
+        </li>
+        <li class="card__list__item">
+            <a href="#" class="text underline underline--main">Aux indépendants</a>
+        </li>
+        <li class="card__list__item">
+            <a href="#" class="text underline underline--main">Aux risques spéciaux</a>
+        </li>
+    </ul>
+</div>
+
+<style scoped>
+    .card{
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        background: white;
+        width: 100%;
+    }
+    .card__list__item{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    @media screen and (min-width:809px){
+        .card{
+            padding: 20px 60px;
+            width: auto;
+        }
+    }
+</style>
