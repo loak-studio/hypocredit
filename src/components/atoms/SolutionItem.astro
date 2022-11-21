@@ -19,7 +19,7 @@ const { solution } = Astro.props;
     <h3 class="h3">{solution.title}</h3>
     <p class="text">{solution.description}</p>
   </div>
-  <Button href="#">Voir tous les {solution.title}</Button>
+  <Button href={solution.href}>Voir tous les {solution.title}</Button>
 </li>
 
 <style scoped>
